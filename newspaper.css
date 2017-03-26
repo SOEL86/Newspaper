@@ -1,0 +1,217 @@
+* {
+	box-sizing:border-box;
+}
+
+
+
+body {
+	margin:0;
+	overflow-x: hidden;
+	background-color:black;
+}
+
+.header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content:flex-end;
+	font-weight: bold;
+	color: white;
+	font-size: 9.8vw;
+	font-family: helvetica;
+	line-height: 6.9vw;
+	box-shadow: inset 0px -200px 200px 0px rgba(0,0,0,0.5);
+}
+.antarctic {
+	background:url(Antarctic.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.china {
+	background:url(China.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.war {
+	background:url(War.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.main {
+	position:relative;
+	margin: 0 auto;
+	overflow-y: hidden;
+	width:100%;
+	height:100vh;
+	box-shadow: inset 20px 0px 40px 0px rgba(0,0,0,0.75);
+	background-color: white;
+}
+.buttons {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	pointer-events: none;
+}
+.article {
+	top:0;
+	left:0;
+	position: absolute;
+	height:100%;
+	font-family:sans-serif;
+	text-align: justify;
+	padding:50px 50px 50px 50px;
+	column-width: 300px;
+	column-gap: 60px;
+	column-rule-color: navy;
+	column-rule-style: dashed;
+	column-rule-width: 2px;
+}
+.img {
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+    break-inside: avoid;
+}
+.tall {
+	background:url(Tall.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:65%;
+}
+.syria {
+	background: url(Syria.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height:300%;
+}
+.img:hover .details {
+	visibility: visible;
+	height:60px;
+}
+.img:hover {
+	background-size: cover;
+}
+.img .details {
+	position: absolute;
+	bottom: 0;
+	width:100%;
+	height:0;
+	opacity: 0.75;
+	background: white;
+	border-top: 1px solid gray;
+	visibility: hidden;
+	cursor: pointer;
+	overflow: scroll;
+}
+
+.img .details .extra {
+	visibility: hidden;
+	padding:20px;
+}
+
+.img .details:active {
+	height:100%;
+}
+
+.img .details:active .extra {
+	visibility: visible;
+}
+aside {
+	height:100%;
+}
+article {
+	position: relative;
+}
+header {
+	height:100vh;
+}
+.logo {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background:url(Logo9.png);
+	background-position: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+}
+.corner-tl {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 80px 80px 0 0;
+	border-color: darkslateblue transparent transparent transparent;
+}
+.corner-tr {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 80px 80px 0;
+	border-color: transparent darkslateblue transparent transparent;
+}
+.corner-br {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 0 80px 80px;
+	border-color: transparent transparent darkslateblue transparent;
+}
+.corner-bl {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 80px 0 0 80px;
+	border-color: transparent transparent transparent darkslateblue;
+}
+header .menu {
+	width:100vw;
+	height:100%;
+	float: right;
+	border-right:4px solid black;
+}
+.menu .option {
+	margin-left: 25%;
+	width:75%;
+	height:33.33%;
+	filter:grayscale(1);
+	transition: filter 0.5s, margin-left 0.5s, border-right 0.5s ease-in-out;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	border-right: 0px solid black;
+}
+.menu .option:hover {
+	filter: grayscale(0);
+	border-right:25vw solid black;
+}
+.menu .option:hover .article-title {
+	opacity: 1;
+}
+.article-title {
+	width:1px;
+	opacity:0;
+	transition: opacity 0.5s;
+	color: white;
+	font-size: 3.3vw;
+	font-family: helvetica;
+	line-height: 2.3vw;
+	font-weight: 900;
+}
